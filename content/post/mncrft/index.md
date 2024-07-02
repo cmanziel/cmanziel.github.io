@@ -1,13 +1,11 @@
 ---
 title: Minecraft-like terrain
-description: Welcome to Hugo Theme Stack
-slug: hello-world
-date: 2022-03-06 00:00:00+0000
+description: Minecraft-like terrain generation using OpenGL
 image: cover.png
 categories:
-    - Example Category
+    - Graphics Programming
 tags:
-    - Example Tag
+    - OpenGL
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
