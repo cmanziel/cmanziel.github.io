@@ -21,4 +21,4 @@ name = "E-mail"
 url = "mailto:claudio.mandelli01@gmail.com"
 
 [social.params]
-icon = "brand-twitter"
+icon = "envelope"
