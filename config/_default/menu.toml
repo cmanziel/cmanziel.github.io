@@ -16,7 +16,7 @@ url = "https://github.com/cmanziel"
 icon = "brand-github"
 
 [[social]]
-identifier = "mail"
+identifier = "mail_white"
 name = "E-mail"
 url = "mailto:claudio.mandelli01@gmail.com"
 
