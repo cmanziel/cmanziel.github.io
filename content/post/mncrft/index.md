@@ -13,6 +13,8 @@ This project aims to recreate a Minecraft-like terrain generation without using 
 
 ## Main Classes
 
+These are the main classes used in the project:
+
 ### Terrain
 
 The terrain is composed of chunks, which are generated around the player according to his position in space.
@@ -62,3 +64,20 @@ The texture coordinates referer to the texture atlas image and depend on the blo
 When a face is deemed to be part of the chunk's mesh a model matrix is calculated from its block's world position and in the vertex shader every position of the vertices of that face will be trasnformed by the matrix
 
 ![A chunk of blocks after evaluating its mesh, every vertex inside the chunk is not rendered.](shell.png "a chunk of blocks before evaluating its mesh")
+
+## Textures
+
+To every visible face of a block is applied a texture according to its ID. All the different textures are stored in a single texture atlas, handled by the *TextureAtlas* class, and are retrieved through the correct offset based on the block's ID.
+
+![Textures applied to the blocks' faces.](textures.png "Textures")
+
+![Use of Perlin noise when a chunk is generated to create an uneven surface.](noise.png "Noise")
+
+![CHUNK_RADIUS number of chunks around the player.](terrain.png "a chunk of blocks before evaluating its mesh")
+
+## Block Breaking
+
+A ray is sent from the player's camera into the world. If it intersects a block whose ID isn't *air* the block's edges are highlighted. On mouse input, the block's ID is set to *air* so that when the mesh is regenerated its faces won't be rendered, conveying the effect of breaking the block.
+The highlighting of the edges is done by giving every vertex of a face *barycentric coordinates* and then checking them in the fragment shader to determine if the vertex is at the edge of a face.
+
+![Highlighting the block pointed by the player.](block_pointed.png "Block pointed")
