@@ -2,11 +2,14 @@
 title: ImageEditor
 description: Image editing tool built with OpenGL and the pnglib library made by me
 image: collage.png
+categories:
+    - Image Processing
+weight: 2
 ---
 
 Hugo theme Stack supports the creation of interactive image galleries using Markdown. It's powered by [PhotoSwipe](https://photoswipe.com/) and its syntax was inspired by [Typlog](https://typlog.com/).
 
-To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo's page bundle feature to read the dimensions of the image. **External images are not supported.**
+A simple version of a tool to edit images by drawing onto them with the mouse cursor. Used OpenGL for the drawing aspect and the static library *pnglib* programmed by me to handle the image encoding.
 
 <!-- ## Syntax
 
