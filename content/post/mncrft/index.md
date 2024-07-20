@@ -1,7 +1,7 @@
 ---
 title: Minecraft-like terrain
 description: Minecraft-like terrain generation using OpenGL
-image: cover.png
+image: terrain.png
 categories:
     - Graphics Programming
 tags:
