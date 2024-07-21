@@ -1,7 +1,7 @@
 ---
 title: Minecraft-like terrain
 description: Minecraft-like terrain generation using OpenGL
-image: terrain.png
+image: terrain_noise.png
 categories:
     - Graphics Programming
 tags:
@@ -44,7 +44,7 @@ These are the classes that wrap around the opengl functions. They are responsibl
 - When the player crosses the edge of the chunk it's in, the terrain around it is regenerated: chunks that are distant more then CHUNK_RADIUS from its position in the grid are deleted and new ones are generated in the direction it's moving
 - When this occurs, m_CurrentChunk is reset to 0 because all the meshes should be generated again according to the new chunks' disposition that affects some of the chunks' surroundings
 
-![A chunk of blocks before evaluating its mesh.](no_shell.png "a chunk of blocks before evaluating its mesh")
+![Terrain generated with the use of Perlin noise to determine the height of every column of blocks.](terrain_noise.png "terrain with noise")
 
 ## Mesh generation process
 
@@ -63,6 +63,8 @@ The texture coordinates referer to the texture atlas image and depend on the blo
 *m_ModelMats*: for every face added to the mesh, a mat4 4x4 matrix is pushed back to the m_ModelMats vector. These are the matrices that will compute the correct 3D position of a vertex.
 When a face is deemed to be part of the chunk's mesh a model matrix is calculated from its block's world position and in the vertex shader every position of the vertices of that face will be trasnformed by the matrix
 
+![A chunk of blocks before evaluating its mesh.](no_shell.png "a chunk of blocks before evaluating its mesh")
+
 ![A chunk of blocks after evaluating its mesh, every vertex inside the chunk is not rendered.](shell.png "a chunk of blocks before evaluating its mesh")
 
 ## Textures
@@ -71,9 +73,7 @@ To every visible face of a block is applied a texture according to its ID. All t
 
 ![Textures applied to the blocks' faces.](textures.png "Textures")
 
-![Use of Perlin noise when a chunk is generated to create an uneven surface.](noise.png "Noise")
-
-![CHUNK_RADIUS number of chunks around the player.](terrain.png "a chunk of blocks before evaluating its mesh")
+![Different textures for different block IDs based on the height they're at.](texture_ids.png "Noise")
 
 ## Block Breaking
 

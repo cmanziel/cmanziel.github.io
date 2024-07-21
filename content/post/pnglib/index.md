@@ -12,7 +12,7 @@ The aim of this project was to generate an uncorrupted PNG file from scratch. [S
 
 ## PNG file structure
 
-According to the [PNG specification](https://www.w3.org/TR/png-3) a PNG file has to contain at least each one of this chunks of data:
+According to the [PNG specification](https://www.w3.org/TR/png-3) a PNG file has to contain at least each one of these chunks of data:
 
 ### IHDR
 
