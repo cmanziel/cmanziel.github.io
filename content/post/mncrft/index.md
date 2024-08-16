@@ -35,7 +35,7 @@ The mesh is the collection of vertices of a chunk that will eventually be drawn 
 
 These are the classes that wrap around the opengl functions. They are responsible of creating a shader program, compiling it and deleting it, allocating the gl buffers and update them with data from the meshes.
 
-## Terrain generation process
+## Terrain generation
 
 - In the Terrain class constructor every Chunk class instance is allocated and stored row-by-row along the z axis in a bidimensional array.
 - The chunks grid consists of a number of CHUNK_RADIUS chunks created along the positive and negative z and x axis from the player
@@ -46,7 +46,7 @@ These are the classes that wrap around the opengl functions. They are responsibl
 
 ![Terrain generated with the use of Perlin noise to determine the height of every column of blocks.](terrain_noise.png "terrain with noise")
 
-## Mesh generation process
+## Mesh generation
 
 - every chunk has a m_LowestSolidHeight field that holds the lowest y coordinate value of the block whose ID is not *air*. The m_Blocks array is iterated through starting from the lowest solid block's index
 - the condition checked first is if the block's world position lies inside the camera's frustum. 
