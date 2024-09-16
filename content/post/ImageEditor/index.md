@@ -1,6 +1,6 @@
 ---
 title: ImageEditor
-description: Image editing tool built with OpenGL and the pnglib library made by me
+description: Image editing tool built with OpenGL and the pnglib library
 image: collage.png
 categories:
     - Image Processing
