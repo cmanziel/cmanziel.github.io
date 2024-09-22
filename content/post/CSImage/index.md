@@ -61,7 +61,7 @@ float kernel_mult(ivec2 pixel_uv, int ch, mat3 kernel)
         }
     }
 
-    return;
+    return kernel_sum;
 }
 
 vec4 edge_pixel(ivec2 uv)
